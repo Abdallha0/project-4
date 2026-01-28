@@ -67,8 +67,9 @@ form {
 
 @media (max-width: 470px) {
     form{
-        scale: .85
+        scale: .9
     }
+.form-section {paddling: 1rem}
 }
 
 .headder {
