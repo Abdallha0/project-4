@@ -68,7 +68,6 @@ form {
 @media (min-width: 470px) {
     form{
         scale: .9;
-background: red;
     }
 .form-section {padding: 1rem}
 }
