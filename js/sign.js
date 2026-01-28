@@ -10,7 +10,7 @@ const lnameLabel = document.querySelector(".lname-label")
 const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!#$%&?]{8,20}$/;
 const nameRegex = /^[a-zA-Z]{3,}$/;
-const domain = "file:///home/abdallha/Desktop/course/projects/project4"
+const domain = "https://abdallha0.github.io/project-4"
 
 passUnvisableBtn.addEventListener("click", () => {
     passInput.type = "text"
