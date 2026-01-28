@@ -1,0 +1,30 @@
+.toggle {
+    animation: toggle 1s forwards;
+    z-index: 9;
+}
+
+@keyframes toggle {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.toggle1 {
+    animation: toggle1 1s forwards;
+    z-index: 10;
+}
+
+@keyframes toggle1 {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
