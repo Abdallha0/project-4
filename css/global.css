@@ -17,4 +17,8 @@ button {
 
 .hidden {
     display: none;
+    width: 0;
+    scale: 0;
+    opacity: 0;
+    visibility: hidden;
 }
