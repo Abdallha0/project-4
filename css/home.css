@@ -1,0 +1,207 @@
+body {
+    background-color: #f5efe4;
+    background: url(../public/layout.jpg) fixed center no-repeat;
+    background-size: 100% 100%;
+}
+
+header {
+    width: 100%;
+    padding: .2rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* From Uiverse.io by vinodjangid07 */
+.sing-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: #6a3e2d;
+    border-radius: 30px;
+    color: #f3eadb;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+    padding: .9rem 1.2rem;
+    transition-duration: .5s;
+}
+
+.svgIcon {
+    height: 25px;
+    transition-duration: 1.5s;
+}
+
+.bell path {
+    fill: rgb(19, 19, 19);
+}
+
+.sing-btn:hover {
+    transition-duration: .5s;
+}
+
+.sing-btn:active {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+
+.sing-btn:hover .svgIcon {
+    transform: rotate(250deg);
+    transition-duration: 1.5s;
+}
+
+.header-container {
+    display: flex;
+    gap: 1rem;
+    padding: 0 .5rem;
+    align-items: center;
+    color: #6a3e2d;
+}
+
+.cart-btn {
+    background-color: transparent;
+    color: #1084d1;
+    position: relative;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.cart-btn .count {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -8px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    font-size: 8px;
+    scale: 1.3;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #1084d1;
+}
+
+.search-container {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-search-btn {
+    background-color: transparent;
+    border: 2px solid #6a3e2d;
+    border-radius: 5px;
+    color: #6a3e2d;
+    text-wrap: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 2.75em;
+    padding: .3rem .7em;
+    text-decoration: none;
+    transition: all .3s;
+    position: relative;
+}
+
+.filter-search-btn:disabled {
+    pointer-events: none;
+}
+
+.filter-search-btn:hover {
+    color: #fff;
+    background-color: rgb(106, 62, 45);
+    box-shadow: rgba(106, 62, 45, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.filter-search-btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.list {
+    position: absolute;
+    bottom: -6rem;
+    padding: .6rem;
+    background-color: #fff;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+    left: 0;
+}
+
+.close .list {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3;
+}
+
+.open .list {
+    visibility: visible;
+    opacity: 1;
+    transition: all .3;
+}
+
+.list input {
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color: #f3eadb;
+    color: #6a3e2d;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+}
+
+.close .toTop {
+    rotate: 0;
+    transition: all .3s;
+}
+
+.open .toTop {
+    rotate: 180deg;
+    transition: all .3s;
+}
+
+[name="searchType"]:hover {
+    background-color: #6a3e2d;
+    color: #fff;
+    transition: all .3s;
+}
+
+.search-input {
+    width: 70%;
+    background-color: #fff;
+    min-height: 2.75em;
+    padding: .8rem .7em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px #6a3e2d25;
+}

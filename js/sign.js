@@ -32,7 +32,7 @@ function handleFormErrors(feildType, msg, e) {
 
         e.target.email.addEventListener("input", () => {
             emailLabel.innerHTML = "Email";
-            emailLabel.style.color = "goldenrod"
+            emailLabel.style.color = "#6a3e2d"
         })
     }
     if (feildType === "password") {
@@ -41,7 +41,7 @@ function handleFormErrors(feildType, msg, e) {
 
         e.target.password.addEventListener("input", () => {
             passwordLabel.innerHTML = "Password";
-            passwordLabel.style.color = "goldenrod"
+            passwordLabel.style.color = "#6a3e2d"
         });
     }
     if (feildType === "fname" && fnameLabel) {
@@ -50,7 +50,7 @@ function handleFormErrors(feildType, msg, e) {
 
         e.target.firstname.addEventListener("input", () => {
             fnameLabel.innerHTML = "FirstName";
-            fnameLabel.style.color = "goldenrod"
+            fnameLabel.style.color = "#6a3e2d"
         });
     }
     if (feildType === "lname" && lnameLabel) {
@@ -59,7 +59,7 @@ function handleFormErrors(feildType, msg, e) {
 
         e.target.lastname.addEventListener("input", () => {
             lnameLabel.innerHTML = "LastName";
-            lnameLabel.style.color = "goldenrod"
+            lnameLabel.style.color = "#6a3e2d"
         });
     }
 }

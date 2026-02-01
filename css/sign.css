@@ -3,26 +3,6 @@
     --tx-color: #202020;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: system-ui;
-}
-
-button,
-input {
-    border: none;
-    outline: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-.hidden {
-    display: none;
-}
 
 .form-section {
     position: relative;
@@ -83,20 +63,20 @@ form {
 
 .headder h1 {
     font-size: 28px;
-    color: goldenrod;
+    color: #6a3e2d;
     font-family: Condiment;
 }
 
 .headder span {
     width: 25px;
     height: 25px;
-    border: solid gold 2px;
+    border: solid #F3EADB 2px;
     border-radius: 50%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 15px gold;
+    box-shadow: 0 0 15px #F3EADB;
 }
 
 .headder span::after {
@@ -105,7 +85,7 @@ form {
     width: 25px;
     height: 25px;
     scale: .5;
-    background-color: goldenrod;
+    background-color: #6a3e2d;
     position: absolute;
     animation: sc infinite 1s;
     filter: blur(2px);
@@ -146,7 +126,7 @@ form {
 }
 
 .form-label {
-    color: goldenrod;
+    color: #6a3e2d;
     position: absolute;
     font-size: 13px;
     display: inline;
@@ -172,7 +152,7 @@ form {
     padding: 1rem;
     font-size: 16px;
     color: #000;
-    border: solid .4px gold;
+    border: solid .4px #F3EADB;
     background-color: #Fff;
 }
 
@@ -224,8 +204,8 @@ form {
     cursor: pointer;
     border-radius: 1.5rem;
     color: var(--bg-color);
-    border: solid gold .5px;
-    color: goldenrod;
+    border: solid #F3EADB .5px;
+    color: #6a3e2d;
     transition: .3s ease;
 }
 
@@ -234,7 +214,7 @@ form {
     border: 0;
     transition: .3s ease;
     color: #fff;
-    background: linear-gradient(45deg, gold, #f8d16e, gold);
+    background: linear-gradient(45deg, #583324, #6a3e2d, #583324);
 
 }
 
@@ -247,7 +227,7 @@ form {
     height: 45px;
     border-radius: 5px;
     background-color: #Fff;
-    color: goldenrod;
+    color: #6a3e2d;
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -273,7 +253,7 @@ form {
 
 .footer span a {
     text-decoration: none;
-    color: goldenrod;
+    color: #6a3e2d;
     font-weight: 500;
 }
 
@@ -288,11 +268,11 @@ a:hover {
     gap: 1rem;
     font-family: Condiment;
     align-items: center;
-    color: goldenrod;
+    color: #6a3e2d;
 }
 
 .footer .line hr {
     width: 50%;
     height: 1px;
-    background-color: gold;
+    background-color: #F3EADB;
 }
