@@ -16,9 +16,9 @@ button {
 }
 
 .hidden {
-    display: none;
-    width: 0;
-    scale: 0;
-    opacity: 0;
-    visibility: hidden;
+    display: none !important;
+    width: 0 !important;
+    scale: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
