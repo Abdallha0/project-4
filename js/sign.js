@@ -10,7 +10,8 @@ const lnameLabel = document.querySelector(".lname-label")
 const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!#$%&?]{8,20}$/;
 const nameRegex = /^[a-zA-Z]{3,}$/;
-const domain = "https://abdallha0.github.io/project-4"
+// const domain = "https://abdallha0.github.io/project-4"
+const domain = "file:///home/abdallha/Desktop/course/projects/project4/"
 
 passUnvisableBtn.addEventListener("click", () => {
     passInput.type = "text"
@@ -153,28 +154,28 @@ function onRegister(e) {
 
 }
 
-function onLogin(e){
-            e.preventDefault();
+function onLogin(e) {
+    e.preventDefault();
 
-        let email = e.target.email.value;
-        let password = e.target.password.value;
-        let validateRes = formValidate(e, "login", email, password)
+    let email = e.target.email.value;
+    let password = e.target.password.value;
+    let validateRes = formValidate(e, "login", email, password)
 
-        if (!validateRes) return;
-        const users = JSON.parse(localStorage.getItem("users"))
+    if (!validateRes) return;
+    const users = JSON.parse(localStorage.getItem("users"))
 
-        if (!users) {
-            location.assign(domain + "/registeration/page.html")
-        }
+    if (!users) {
+        location.assign(domain + "/registeration/page.html")
+    }
 
-        const checkUser = users.find(i => i.email === email && i.password === password);
-        if (!checkUser) {
-            handleFormErrors("email", "wrong email or passwrod", e)
-            return;
-        }
+    const checkUser = users.find(i => i.email === email && i.password === password);
+    if (!checkUser) {
+        handleFormErrors("email", "wrong email or passwrod", e)
+        return;
+    }
 
-        localStorage.setItem("active-user", email)
-        location.replace(domain + "/home/page.html")
+    localStorage.setItem("active-user", email)
+    location.replace(domain + "/home/page.html")
 }
 
 if (loginForm) loginForm.onsubmit = (e) => onLogin(e)

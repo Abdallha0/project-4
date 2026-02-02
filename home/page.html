@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/home.css">
 </head>
@@ -12,11 +13,11 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="../public/logo.jpg" alt="" class="logo" />
+            <img src="../public/google.png" alt="" class="logo" />
         </div>
 
         <div class="sign-container">
-            <button class="sing-btn">
+            <button class="sing-btn" id="login">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-cup-hot-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -50,9 +51,15 @@
             </div>
         </button>
 
-        <input type="text" name="search" id="search" class="search-input" placeholder="search..">
+        <form>
+            <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" name="search" id="search" class="search-input" placeholder="search..">
+        </form>
     </div>
 
+    <section class="products-sec">
+        
+    </section>
     <script src="../js/home.js"></script>
 </body>
 
