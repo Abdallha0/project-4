@@ -37,6 +37,10 @@ header {
     transition-duration: .5s;
 }
 
+#logout {
+    background-color: #db0101;
+}
+
 .svgIcon {
     height: 25px;
     transition-duration: 1.5s;
@@ -280,9 +284,11 @@ header {
     display: flex;
     gap: .8rem;
     justify-content: center;
+    align-items: center;
 }
 
-#add-cart, #remove-cart {
+.add-cart,
+.remove-cart {
     padding: .4rem .6rem;
     border-radius: 3px;
     background-color: #6a3e2d;
@@ -291,8 +297,8 @@ header {
     text-transform: capitalize;
 }
 
-#remove-cart{
-    background-color: rgb(219, 1, 1);
+.remove-cart {
+    background-color: #db0101;
 }
 
 .product-card,
@@ -306,4 +312,17 @@ header {
 
 .card-btns-container button:active {
     scale: .9;
+}
+
+.top-btn {
+    position: fixed;
+    bottom: .3rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.arrow {
+    scale: 2.5;
+    color: #6a3e2d;
 }
