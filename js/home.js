@@ -7,8 +7,8 @@ if (activeUser) {
     document.querySelector(".header-container").classList.toggle("hidden");
 }
 
-// const domain = "https://abdallha0.github.io/project-4"
-const domain = `${location.origin}`
+ const domain = "https://abdallha0.github.io/project-4"
+//const domain = `${location.origin}`
 const GoLogin = () => location.assign(domain + "/login/page.html")
 loginBtn.onclick = GoLogin;
 
@@ -37,7 +37,7 @@ searchTypeInput.forEach(i => i.onclick = () => document.querySelector(".btn-valu
 const productsSec = document.querySelector(".products-sec");
 (async function () {
     productsSec.innerHTML = "<p>...loading</p>"
-    const res = await fetch('/json/data.json');
+    const res = await fetch(domain+'/json/data.json');
     const data = await res.json();
 
     productsSec.innerHTML = data.map(i => {
