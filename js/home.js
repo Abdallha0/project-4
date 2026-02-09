@@ -41,13 +41,13 @@ const productsSec = document.querySelector(".products-sec");
     const res = await fetch(domain + '/json/data.json');
     const data = await res.json();
 
-    document.writeln(res, "res")
+    document.writeln("res")
 
     productsSec.innerHTML = data.map(i => {
      return createProductCard(i)
     }).join("");
 } catch (err){
-    document.writeln(err+"err")
+    document.writeln("err")
 }})()
 
 
