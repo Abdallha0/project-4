@@ -41,7 +41,7 @@ const productsSec = document.querySelector(".products-sec");
     const res = await fetch(domain + '/json/data.json');
     const data = await res.json();
 
-    document.writeln("res")
+    document.writeln("res", data)
 
     productsSec.innerHTML = data.map(i => {
      return createProductCard(i)
