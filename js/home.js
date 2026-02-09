@@ -44,15 +44,14 @@ const productsSec = document.querySelector(".products-sec");
     document.writeln(res)
 
     productsSec.innerHTML = data.map(i => {
-        return createProductCard(i)
+     return createProductCard(i)
     }).join("");
 } catch (err){
     document.writeln(err)
-};
+}})()
 
-})()
 
-function createProductCard(i) {
+    function createProductCard(i) {
     return `<div class="product-card">
             <div class="img-container">
                 <img src="${i.image}" alt="${i.name}">
