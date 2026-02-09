@@ -37,7 +37,7 @@ searchTypeInput.forEach(i => i.onclick = () => document.querySelector(".btn-valu
 const productsSec = document.querySelector(".products-sec");
 (async function () {
     productsSec.innerHTML = "<p>...loading</p>"
-    const res = await fetch(domain+'/json/data.json');
+    const res = await fetch('/json/data.json');
     const data = await res.json();
 
     productsSec.innerHTML = data.map(i => {
