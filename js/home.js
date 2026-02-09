@@ -47,7 +47,7 @@ const productsSec = document.querySelector(".products-sec");
      return createProductCard(i)
     }).join("");
 } catch (err){
-    document.writeln(err,)
+    document.writeln(err+"err")
 }})()
 
 
