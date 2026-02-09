@@ -36,15 +36,20 @@ searchTypeInput.forEach(i => i.onclick = () => document.querySelector(".btn-valu
 
 const productsSec = document.querySelector(".products-sec");
 (async function () {
+    try{
     productsSec.innerHTML = "<p>...loading</p>"
     const res = await fetch(domain + '/json/data.json');
     const data = await res.json();
 
-    alert(res)
+    document.writeln(res)
 
     productsSec.innerHTML = data.map(i => {
         return createProductCard(i)
     }).join("");
+} catch (err){
+    alert(err)
+};
+
 })()
 
 function createProductCard(i) {
