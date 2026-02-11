@@ -11,7 +11,7 @@ const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\
 const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!#$%&?]{8,20}$/;
 const nameRegex = /^[a-zA-Z]{3,}$/;
 const domain = "https://abdallha0.github.io/project-4"
-//const domain = "http://127.0.0.1:3000/"
+// const domain = `${location.origin}`
 
 passUnvisableBtn.addEventListener("click", () => {
     passInput.type = "text"
