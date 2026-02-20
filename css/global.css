@@ -23,3 +23,169 @@ button {
     opacity: 0 !important;
     visibility: hidden !important;
 }
+
+.clickEffect {
+    transition: all .3s;
+}
+
+.clickEffect:active {
+    scale: .9;
+    transition: all .3s;
+}
+
+body {
+    background-color: #f3eadb;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: system-ui;
+}
+
+a{
+    text-decoration: none;
+    color: #1084d1;
+}
+
+header {
+    width: 100%;
+    padding: .2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.sing-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: #6a3e2d;
+    border-radius: 30px;
+    color: #f3eadb;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: 0 0 10px 5px #6a3e2d25;
+    padding: .9rem 1.2rem;
+    transition-duration: .5s;
+}
+
+#logout {
+    background-color: #db0101;
+}
+
+.svgIcon {
+    height: 25px;
+    transition-duration: 1.5s;
+}
+
+.bell path {
+    fill: rgb(19, 19, 19);
+}
+
+.sing-btn:hover {
+    transition-duration: .5s;
+}
+
+.sing-btn:active {
+    transform: scale(0.97);
+    transition-duration: .2s;
+}
+
+.sing-btn:hover .svgIcon {
+    transform: rotate(250deg);
+    transition-duration: 1.5s;
+}
+
+.header-container {
+    display: flex;
+    gap: 1rem;
+    padding: 0 .5rem;
+    align-items: center;
+    color: #6a3e2d;
+}
+
+.cart-btn {
+    background-color: transparent;
+    color: #1084d1;
+    position: relative;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.cart-btn .count:not(:empty) {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -8px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    font-size: 8px;
+    scale: 1.3;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #1084d1;
+}
+
+.not-found-msg {
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #000;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid #6a3e2d;
+    border-left: 4px solid transparent;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

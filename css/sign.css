@@ -3,6 +3,19 @@
     --tx-color: #202020;
 }
 
+.sentince{
+    position: absolute;
+    z-index: 99999;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    text-transform: capitalize;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+}
 
 .form-section {
     position: relative;
@@ -46,11 +59,13 @@ form {
 }
 
 @media (min-width: 470px) {
-    form{
+    form {
         scale: .9;
     }
 
-.form-section {padding: 1rem}
+    .form-section {
+        padding: 1rem
+    }
 }
 
 .headder {
