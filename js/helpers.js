@@ -3,8 +3,8 @@ const activeUser = localStorage.getItem("active-user") || "";
 const headerParent = document.querySelector(".header-parent");
 const users = JSON.parse(localStorage.getItem("users"));
 const user = users?.find(i => i.email === activeUser);
-// const domain = "https://abdallha0.github.io/project-4"
-const domain = location.origin;
+const domain = "https://abdallha0.github.io/project-4"
+//const domain = location.origin;
 
 //------------------------
 
