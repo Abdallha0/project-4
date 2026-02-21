@@ -4,7 +4,7 @@ const fav = user.fav;
 if (!cart.length && !fav.length) {
     document.body.innerHTML = `<div class="not-found-msg">${notFound("no data to show", "")}
     </br>
-    <a href="/home/page.html">add some products</a>
+    <a href="../home/page.html">add some products</a>
     </div>`;
 }
 
