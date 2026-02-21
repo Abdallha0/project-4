@@ -28,7 +28,7 @@ document.getElementById("search-form").onsubmit = async (e) => {
 
     productsSec.innerHTML = results.length >= 1 ? (results.map(i => {
         return createProductCard(i)
-    }).join("")) : `<h2>No products ${searchType} matches yours query</h2>`;
+    }).join("")) : `<h2 calss="not-found-msg">No products ${searchType} matches yours query</h2>`;
 }
 
 // live search
@@ -41,11 +41,11 @@ document.getElementById("search").oninput = async function () {
     const results = await handelSearch(searchType, value)
     productsSec.innerHTML = results.length >= 1 ? (results.map(i => {
         return createProductCard(i)
-    }).join("")) : `<h2>No products ${searchType} matches yours query</h2>`;
+    }).join("")) : `<h2 class="not-found-msg">No products ${searchType} matches yours query</h2>`;
 }
 //------------------------
 async function products() {
-    productsSec.innerHTML = "<p>...loading</p>"
+    productsSec.innerHTML = loader
     const res = await fetch(domain + '/json/data.json');
     const data = await res.json();
 
@@ -66,7 +66,7 @@ function createProductCard(i) {
                 <p>category: <span>${i.category}</span></p>
                 <div class="card-btns-container">
                 <div id="likes-container${i.id}">
-                    ${(user.fav || []).some(it => it == i.id) ? (
+                    ${(user?.fav || []).some(it => it == i.id) ? (
             `<button onClick="like('remove',${i.id})"
                          id="liked${i.id}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red"
@@ -84,7 +84,7 @@ function createProductCard(i) {
                     </button>`)}
                     </div>
                     <div id="cart-container${i.id}">
-                    ${(user.cart || []).some(it => it.id === i.id) ? (`<button onClick="cart('remove', ${i.id}, '${i.name}', '${i.category}', ${i.image}', ${i.price})" class="remove-cart">remove to cart</button>`) : (`<button onClick="cart('set', ${i.id}, '${i.name}', '${i.category}', '${i.image}', ${i.price})" class="add-cart">add to cart</button>`)}
+                    ${(user?.cart || []).some(it => it.id === i.id) ? (`<button onClick="cart('remove', ${i.id}, '${i.name}', '${i.category}', ${i.image}', ${i.price})" class="remove-cart">remove to cart</button>`) : (`<button onClick="cart('set', ${i.id}, '${i.name}', '${i.category}', '${i.image}', ${i.price})" class="add-cart">add to cart</button>`)}
                     </div>
                 </div>
             </div>
@@ -93,12 +93,11 @@ function createProductCard(i) {
 };
 //------------------------
 function like(status, id) {
+    if (!user) {
+        GoLogin()
+        return;
+    }
     if (status === "set") {
-        if (!user) {
-            GoLogin()
-            return;
-        }
-
         document.getElementById(`likes-container${id}`).innerHTML = `
         <button onClick="like('remove',${id})"
                          id="liked${id}">
@@ -136,12 +135,12 @@ function like(status, id) {
 
 //------------------------
 function cart(status, id, name, category, image, price) {
-    const item = user.cart.find(i => i.id == id)
+    if (!user) {
+        GoLogin()
+        return;
+    }
+    const item = user?.cart.find(i => i.id == id)
     if (status === "set") {
-        if (!user) {
-            GoLogin()
-            return;
-        }
         document.getElementById(`cart-container${id}`).innerHTML = `<button onClick="cart('remove', ${id}, '${name}', '${category}', '${image}', ${price})" class="remove-cart">remove to cart</button>`
         if (user.cart) {
             if (item) return;

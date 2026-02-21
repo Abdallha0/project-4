@@ -2,9 +2,10 @@
 const activeUser = localStorage.getItem("active-user") || "";
 const headerParent = document.querySelector(".header-parent");
 const users = JSON.parse(localStorage.getItem("users"));
-const user = users?.find(i => i.email === activeUser);
-const domain = "https://abdallha0.github.io/project-4"
-//const domain = location.origin;
+const user = users?.find(i => i.email === activeUser) || null;
+// const domain = "https://abdallha0.github.io/project-4"
+const domain = location.origin;
+const loader = "<div class='loader'></div>"
 
 //------------------------
 
@@ -53,5 +54,5 @@ function syncUserData(thisUser) {
 const cartCount = document.querySelector(".count")
 
 function notFound(msg, Nclass) {
-    return `<h2 class="${Nclass}">${msg}</h2>`
+    return `<h2 class="${Nclass ? "" : "not-found-msg"}">${msg}</h2>`
 }

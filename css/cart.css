@@ -1,3 +1,8 @@
+.content{
+    height: 91.2vh;
+    width: 100%;
+}
+
 .cart-product-sec {
     display: flex;
     flex-direction: column;

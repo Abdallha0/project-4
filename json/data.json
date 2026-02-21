@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Espresso",
         "category": "Hot Coffee",
-        "price": 2.5,
+        "price": 8,
         "rating": 4.7,
         "image": "https://i.pinimg.com/736x/c3/b3/f3/c3b3f3fa835e49aba522ee28c43975fb.jpg",
         "available": true
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Double Espresso",
         "category": "Hot Coffee",
-        "price": 3.0,
+        "price": 6,
         "rating": 4.8,
         "image": "https://i.pinimg.com/736x/15/46/ce/1546ce0b80557450e3faef80a25c6f7a.jpg",
         "available": true
@@ -21,7 +21,7 @@
         "id": 3,
         "name": "Americano",
         "category": "Hot Coffee",
-        "price": 3.0,
+        "price": 10.5,
         "rating": 4.5,
         "image": "https://i.pinimg.com/1200x/a6/1f/29/a61f29b3eb2bff94b7e7c0743c876aaf.jpg",
         "available": true
@@ -30,7 +30,7 @@
         "id": 4,
         "name": "Cappuccino",
         "category": "Hot Coffee",
-        "price": 3.5,
+        "price": 20,
         "rating": 4.8,
         "image": "https://i.pinimg.com/736x/ac/11/56/ac1156d303d97b2d10888ed4befd1749.jpg",
         "available": true
@@ -39,13 +39,13 @@
         "id": 5,
         "name": "Latte",
         "category": "Hot Coffee",
-        "price": 3.8,
+        "price": 14.2,
         "rating": 4.6,
         "image": "https://i.pinimg.com/1200x/49/2a/cb/492acb6b1035a4442c990f2ba74d3639.jpg",
         "available": true
     },
     {
-        "id": 6,
+        "id": 9.9,
         "name": "Mocha",
         "category": "Hot Coffee",
         "price": 4.2,
@@ -57,7 +57,7 @@
         "id": 7,
         "name": "Flat White",
         "category": "Hot Coffee",
-        "price": 3.6,
+        "price": 13.2,
         "rating": 4.6,
         "image": "https://i.pinimg.com/1200x/69/8b/7a/698b7aeeb92cf916317521c98b92928a.jpg",
         "available": false
@@ -66,7 +66,7 @@
         "id": 8,
         "name": "Macchiato",
         "category": "Hot Coffee",
-        "price": 3.2,
+        "price": 13,
         "rating": 4.5,
         "image": "https://i.pinimg.com/736x/0d/87/b7/0d87b7503518acbce8cc2284f608b2d0.jpg",
         "available": true
@@ -75,7 +75,7 @@
         "id": 9,
         "name": "Cortado",
         "category": "Hot Coffee",
-        "price": 3.4,
+        "price": 24,
         "rating": 4.4,
         "image": "https://i.pinimg.com/736x/60/ae/7c/60ae7c840ef9f2e95fc5ab8ca2348c0a.jpg",
         "available": true
@@ -84,7 +84,7 @@
         "id": 10,
         "name": "Irish Coffee",
         "category": "Hot Coffee",
-        "price": 4.8,
+        "price": 14,
         "rating": 4.3,
         "image": "https://i.pinimg.com/1200x/c6/d7/9e/c6d79e5ad75c3f892b42f845065408ab.jpg",
         "available": true
@@ -93,7 +93,7 @@
         "id": 11,
         "name": "Iced Coffee",
         "category": "Cold Coffee",
-        "price": 3.2,
+        "price": 22.3,
         "rating": 4.3,
         "image": "https://i.pinimg.com/1200x/25/6c/d5/256cd5d6484538b4bc710de34d533044.jpg",
         "available": true
@@ -102,7 +102,7 @@
         "id": 12,
         "name": "Iced Latte",
         "category": "Cold Coffee",
-        "price": 3.9,
+        "price": 7.5,
         "rating": 4.5,
         "image": "https://i.pinimg.com/736x/4d/e0/68/4de068124212961d6481e6c631774053.jpg",
         "available": true
@@ -111,7 +111,7 @@
         "id": 13,
         "name": "Iced Mocha",
         "category": "Cold Coffee",
-        "price": 4.3,
+        "price": 28,
         "rating": 4.4,
         "image": "https://i.pinimg.com/1200x/ab/d9/5e/abd95ef8c28fe70d3dd3f8e43950fdea.jpg",
         "available": true
@@ -120,7 +120,7 @@
         "id": 14,
         "name": "Cold Brew",
         "category": "Cold Coffee",
-        "price": 4.0,
+        "price": 27,
         "rating": 4.6,
         "image": "https://i.pinimg.com/1200x/70/9f/e2/709fe231bb7614c908f233b21461a874.jpg",
         "available": true
@@ -129,7 +129,7 @@
         "id": 15,
         "name": "Nitro Cold Brew",
         "category": "Cold Coffee",
-        "price": 4.8,
+        "price": 32,
         "rating": 4.7,
         "image": "https://i.pinimg.com/736x/d8/5f/17/d85f178949e0011bc99a47441d08bf8e.jpg",
         "available": true
@@ -138,7 +138,7 @@
         "id": 16,
         "name": "Affogato",
         "category": "Dessert Coffee",
-        "price": 4.5,
+        "price": 18.5,
         "rating": 4.6,
         "image": "https://i.pinimg.com/1200x/78/2c/61/782c619ddd60a4d6cd41dc992eeac35a.jpg",
         "available": true
@@ -147,7 +147,7 @@
         "id": 17,
         "name": "Turkish Coffee",
         "category": "Traditional Coffee",
-        "price": 2.8,
+        "price": 30,
         "rating": 4.9,
         "image": "https://i.pinimg.com/1200x/90/6f/1e/906f1ef6b9b6aac746163c499fbf4842.jpg",
         "available": true
@@ -156,7 +156,7 @@
         "id": 18,
         "name": "Arabic Coffee",
         "category": "Traditional Coffee",
-        "price": 2.6,
+        "price": 35,
         "rating": 4.4,
         "image": "https://i.pinimg.com/736x/05/f6/ef/05f6ef654b40ed0031afc2458c13f562.jpg",
         "available": true
@@ -165,7 +165,7 @@
         "id": 19,
         "name": "French Press",
         "category": "Brewed Coffee",
-        "price": 3.7,
+        "price": 40,
         "rating": 4.5,
         "image": "https://i.pinimg.com/736x/7c/ff/92/7cff9259605cabc4cc2a9e9ee37018ea.jpg",
         "available": true
@@ -174,7 +174,7 @@
         "id": 20,
         "name": "Pour Over",
         "category": "Brewed Coffee",
-        "price": 3.9,
+        "price": 26.5,
         "rating": 4.6,
         "image": "https://i.pinimg.com/1200x/bb/11/9a/bb119a2253d97ab01d95cf7bdb6a39ea.jpg",
         "available": true

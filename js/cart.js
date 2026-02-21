@@ -1,3 +1,7 @@
+if (!user) GoLogin();
+
+const content = document.querySelector(".content")
+
 const cart = user.cart;
 const fav = user.fav;
 
@@ -10,9 +14,9 @@ if (!cart.length && !fav.length) {
 
 const cartContaienr = document.querySelector(".cart-contaienr");
 const totalPrice = document.querySelector(".total-price span");
-const slider = document.querySelector(".slider");
 
 function Carts() {
+    cartContaienr.innerHTML = loader
     if (!cart.length) {
         document.querySelector(".cart-product-sec").innerHTML = notFound("no products in cart");
     }
@@ -41,8 +45,9 @@ function Carts() {
             </div>
         </div>`
     )).join("")
+    content.classList.remove("hidden");
+    return;
 }
-Carts();
 
 totalPrice.textContent = (cart.reduce((acc, cur) => (acc + (cur.price * cur.count)), 0)).toFixed(2)
 
@@ -51,11 +56,11 @@ function removeCart(id, count, price) {
     totalPrice.textContent = (+(totalPrice.textContent) - count * price).toFixed(2)
     const otherPro = user.cart.filter(i => i.id !== id)
     user.cart = otherPro;
-
-    if (!otherPro) {
-        document.querySelector(".total-price").classList.toggle("hidden")
-    }
     syncUserData(user)
+    if (!otherPro.length) {
+        document.querySelector(".cart-product-sec").innerHTML = notFound("no products in cart");
+    }
+    return;
 }
 
 function mangeQuantaty(status, id, price, count) {
@@ -72,12 +77,18 @@ function mangeQuantaty(status, id, price, count) {
             document.querySelector(`.item${id}`).classList.add("hidden")
             const otherPro = cart.filter(i => i.id !== id)
             user.cart = otherPro;
+            if (!otherPro.length) {
+                document.querySelector(".cart-product-sec").innerHTML = notFound("no products in cart");
+            }
         }
     }
     syncUserData(user)
+    return;
 }
+const slider = document.querySelector(".slider");
 
 async function Favs() {
+    slider.innerHTML = loader;
     if (!fav.length) {
         document.querySelector(".fav-sec").innerHTML = notFound("no favorite items")
         return;
@@ -102,9 +113,10 @@ async function Favs() {
                         <path fill-rule="evenodd"
                             d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
                     </svg></button> </div>`)).join("");
+    content.classList.remove("hidden");
 
     return;
-} Favs()
+} 
 
 document.getElementById("left")?.addEventListener('click', () => {
     slider.scrollBy({
@@ -131,4 +143,15 @@ function removeFav(id) {
     }
     return;
 
+}
+
+if (!cart.length && !fav.length) {
+    content.innerHTML = `<div class="not-found-msg">${notFound("no data to show", true)}
+    </br>
+    <a href="/home/page.html">add some products</a>
+    </div>`;
+    content.classList.toggle("hidden")
+}else{
+    Carts();
+    Favs();
 }
