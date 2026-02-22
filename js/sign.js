@@ -10,21 +10,23 @@ const lnameLabel = document.querySelector(".lname-label")
 const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!#$%&?]{8,20}$/;
 const nameRegex = /^[a-zA-Z]{3,}$/;
-const domain = "https://abdallha0.github.io/project-4"
-//const domain = `${location.origin}`
+const domain = location.protocol.startsWith("https") ? "https://abdallha0.github.io/project-4" : location.origin;
 
+//--------------------------
 passUnvisableBtn.addEventListener("click", () => {
     passInput.type = "text"
     passUnvisableBtn.classList.add("hidden");
     passVisableBtn.classList.remove("hidden")
 })
 
+//--------------------------
 passVisableBtn.addEventListener("click", () => {
     passInput.type = "password"
     passVisableBtn.classList.add("hidden");
     passUnvisableBtn.classList.remove("hidden")
 });
 
+//--------------------------
 function handleFormErrors(feildType, msg, e) {
 
     if (feildType === "email") {
@@ -65,6 +67,7 @@ function handleFormErrors(feildType, msg, e) {
     }
 }
 
+//--------------------------
 function formValidate(e, mode, email, password, fname, lname) {
 
     if (mode === "register") {
@@ -118,6 +121,7 @@ function formValidate(e, mode, email, password, fname, lname) {
     return true;
 }
 
+//--------------------------
 function onRegister(e) {
     e.preventDefault();
     const email = e.target.email.value.trim().toLowerCase();
@@ -156,6 +160,7 @@ function onRegister(e) {
 
 }
 
+//--------------------------
 function onLogin(e) {
     e.preventDefault();
 
@@ -181,5 +186,4 @@ function onLogin(e) {
 }
 
 if (loginForm) loginForm.onsubmit = (e) => onLogin(e)
-
 if (registerForm) registerForm.onsubmit = (e) => onRegister(e)

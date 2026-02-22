@@ -3,23 +3,29 @@ const activeUser = localStorage.getItem("active-user") || "";
 const headerParent = document.querySelector(".header-parent");
 const users = JSON.parse(localStorage.getItem("users"));
 const user = users?.find(i => i.email === activeUser) || null;
-// const domain = "https://abdallha0.github.io/project-4"
-const domain = location.origin;
+const domain = location.protocol.startsWith("https") ? "https://abdallha0.github.io/project-4" : location.origin;
+
 const loader = "<div class='loader'></div>"
 
 //------------------------
+const inCart = location.pathname.includes("cart");
 
 const GoLogin = () => location.assign(domain + "/login/page.html");
+
+if (inCart && !user) GoLogin();
+
 const logOut = () => {
     localStorage.removeItem("active-user");
     location.assign(domain + "/login/page.html");
 }
+
+//--------------------------
 if (activeUser) {
     headerParent.innerHTML = `<div class="header-container">
             <span class="name">${user.firstName}</span>
 
-            ${location.pathname.split("/").includes("cart") ?
-            (`<button onClick="location.assign(domain + '/home/page.html')" class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+            ${inCart ?
+            (`<button onClick="location.assign('/home/page.html')" class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
   <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
 </svg></button>`) :
             (`<button onClick="handleCartClick()" class="cart-btn"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
@@ -45,14 +51,35 @@ if (activeUser) {
         </div>`
 }
 
+//--------------------------
 function syncUserData(thisUser) {
     if (!thisUser) return;
     const getAllUsers = users.filter(i => i.email !== user.email);
     localStorage.setItem("users", JSON.stringify([...getAllUsers, thisUser]))
 }
 
+//--------------------------
 const cartCount = document.querySelector(".count")
 
+//--------------------------
 function notFound(msg, Nclass) {
     return `<h2 class="${Nclass ? "" : "not-found-msg"}">${msg}</h2>`
+}
+
+//--------------------------
+function scrollTop() {
+    const fullHeight = window.screen.availHeight;
+    const topBtn = document.getElementById("top-btn")
+
+    if (window.pageYOffset >= (fullHeight / 2)) {
+        topBtn.classList.remove("hidden")
+    } else {
+        topBtn.classList.add("hidden")
+    }
+
+    topBtn.onclick = () => window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
 }

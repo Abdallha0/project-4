@@ -128,8 +128,22 @@ hr{
     font-family: Condiment;
     letter-spacing: 1px;
     font-size: 30px;
+    position: relative;
 }
 
+.sec-title h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.sec-title h2:hover::after{
+    transform: scaleX(1.3);
+}
 .slider {
     display: flex;
     gap: 1rem;
@@ -140,7 +154,6 @@ hr{
     padding: 1rem;
     scrollbar-width: none;
     scrollbar-color: transparent transparent;
-    justify-content: center;
 }
 
 .fav-cart {
