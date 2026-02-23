@@ -22,7 +22,7 @@ function mangeQuantaty(p, ind) {
         const products = user.cart.filter(i => i.count > 0);
         user.cart = products;
     }
-    priceTag.innerHTML = `${product.count * product.price}<sup>$</sup>`;
+    priceTag.innerHTML = `${(product.count * product.price).toFixed(1)}<sup>$</sup>`;
     document.querySelector(`.quantaty${ind}`).textContent = product.count;
     syncUserData(user);
     return;
