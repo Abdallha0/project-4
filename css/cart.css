@@ -1,6 +1,7 @@
 .content{
-    height: 91.2vh;
     width: 100%;
+    height: 100vh;
+    min-height: fit-content;
 }
 
 .cart-product-sec {
