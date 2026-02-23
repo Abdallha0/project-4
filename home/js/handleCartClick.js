@@ -15,7 +15,7 @@ function handleCartClick() {
                 </h3>
                 <p>
                 Price
-                   <strong class="cart-porduct-price${i.id}">${i.price * i.count}<sup>$</sup></strong>
+                   <strong class="cart-porduct-price${i.id}">${(i.price * i.count).toFixed(1)}<sup>$</sup></strong>
                 </p>
             </div>
             <div class="quantaty-container">
