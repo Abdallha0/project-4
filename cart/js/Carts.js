@@ -15,7 +15,7 @@ const cartContaienr = document.querySelector(".cart-contaienr");
                 <div class="cart-card-body">
                     <h3>${i.name}</h3>
                     <p><span>${i.category || ""}</span>
-                        <span class="price${i.id}">${i.price * i.count}<sup>$</sup></span>
+                        <span class="price${i.id}">${(i.price * i.count).toFixed(1)}<sup>$</sup></span>
                     </p>
 
                     <div class="cart-btn-container">
