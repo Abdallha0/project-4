@@ -59,6 +59,9 @@ header {
     height: 50px;
     border-radius: 50%;
 }
+.sign-container {
+    padding: 0 1rem;
+}
 
 .sing-btn {
     display: flex;
